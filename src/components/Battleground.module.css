@@ -1,0 +1,9 @@
+.battleground {
+    background-image: url("../assets/img/battleground-background.png");
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}

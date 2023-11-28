@@ -1,0 +1,23 @@
+.lifeBar {
+    height: 30px;
+    background-color: green;
+}
+
+.lifeBarBorder {
+    border: 8px solid;
+    border-color: rgb(65, 63, 62);
+    height: 30px;
+    width: 300px;
+    /*margin-top: -80px;*/
+}
+
+.hp {
+    text-align: center;
+    margin: auto;
+    width: 100px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    background-color: grey;
+    /*margin-top: -110px;*/
+}
