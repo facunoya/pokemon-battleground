@@ -1,0 +1,11 @@
+.movesContainer {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.moves {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}

@@ -38,7 +38,7 @@ const Battleground = () => {
         <div className={classes.battleground}>
             {userPokemon && <Pokemon pokemon={userPokemon} user="user"></Pokemon>}
             {enemyPokemon && <Pokemon pokemon={enemyPokemon} user="enemy"></Pokemon>}
-            <FightMenu></FightMenu>
+            <FightMenu pokemon={userPokemon} user="user"></FightMenu>
         </div>
     )
 }
