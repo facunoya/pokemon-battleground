@@ -59,23 +59,42 @@ const Battleground = () => {
     })
     const [userPokemon, setUserPokemon] = useState()
     const [enemyPokemon, setEnemyPokemon] = useState()
-    const handlePokemonAttack = (attack) => {
-        if (enemyPokemon && enemyPokemon.currentHP > 0) {
-            const result = enemyPokemon.currentHP - attack.damage;
-            if (result <= 0) {
-                setEnemyPokemon((prevState) => {
-                    let newState = { ...prevState }
-                    newState.currentHP = 0
-                    return newState
-                })
-            } else {
-                setEnemyPokemon((prevState) => {
-                    let newState = { ...prevState }
-                    newState.currentHP = result
-                    return newState
-                })
+    const handlePokemonAttack = (attack, selectedOption) => {
+        if (selectedOption === "attacks") {
+            if (enemyPokemon && enemyPokemon.currentHP > 0) {
+                const result = enemyPokemon.currentHP - attack.damage;
+                if (result <= 0) {
+                    setEnemyPokemon((prevState) => {
+                        let newState = { ...prevState }
+                        newState.currentHP = 0
+                        return newState
+                    })
+                } else {
+                    setEnemyPokemon((prevState) => {
+                        let newState = { ...prevState }
+                        newState.currentHP = result
+                        return newState
+                    })
+                }
+                return result
             }
-            return result
+        }
+        if (selectedOption === "objects") {
+            setUserPokemon((prevState) => {
+                let newPokemon = { ...prevState }
+                newPokemon.currentHP += attack.value
+                return newPokemon
+            })
+            setUser((prevState) => {
+                let newUser = { ...prevState }
+                newUser.pokemons.forEach((pokemon) => {
+                    if (pokemon.active) {
+                        pokemon.currentHP += attack.value
+                    }
+                    return pokemon
+                })
+                return newUser
+            })
         }
     }
     useEffect(() => {
