@@ -1,5 +1,5 @@
 import classes from './AttackList.module.css'
-import { useEffect, useState } from 'react'
+
 const AttackList = ({ pokemon, enemyPokemon }) => {
     const damageCaused = (damage) => {
         if (enemyPokemon && enemyPokemon.currentHP > 0) {
@@ -25,7 +25,8 @@ const AttackList = ({ pokemon, enemyPokemon }) => {
     };
     return (
         <ul className={classes.movesContainer} >
-            {pokemon && pokemon.moves.map((x, i) => { return <li key={x.name + i} className={classes.moves} onClick={() => { damageCaused(x.damage); console.log(x.damage) }}>{x.name}</li> })}
+            {pokemon && pokemon.moves.map((x, i) => { return <li key={x.name + i} className={classes.moves} onClick={() => { damageCaused(x.damage); console.log('daño: ', x.damage) }}>{x.name}</li> })}
+            <div className={classes.attack}></div>
         </ul>
     )
 }

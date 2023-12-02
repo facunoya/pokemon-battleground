@@ -33,3 +33,13 @@
     right: 100px;
     position: absolute;
 }
+
+@media (max-width: 700px) {
+    .enemyPokemonWrapper {
+        right: 50px;
+    }
+
+    .userPokemonWrapper {
+        left: 10px;
+    }
+}

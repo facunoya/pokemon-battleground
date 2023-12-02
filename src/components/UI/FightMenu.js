@@ -1,6 +1,6 @@
 import classes from './FightMenu.module.css'
 import AttackList from './AttackList'
-import { useEffect, useState } from 'react'
+
 
 const FightMenu = ({ pokemon, enemyPokemon }) => {
 
