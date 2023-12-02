@@ -1,7 +1,6 @@
 .userPokemon {
-    background-image: url("../assets/img/pokemon.png");
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 50%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     top: 100px;
@@ -9,9 +8,8 @@
 }
 
 .enemyPokemon {
-    background-image: url("../assets/img/pokemon2.png");
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 50%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     top: 100px;
@@ -19,8 +17,8 @@
 }
 
 .userPokemonWrapper {
-    height: 200px;
-    width: 150px;
+    height: 40%;
+    width: 40%;
     bottom: 30px;
     left: 100px;
     position: absolute;
