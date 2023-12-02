@@ -59,10 +59,10 @@ const Battleground = () => {
     })
     const [userPokemon, setUserPokemon] = useState()
     const [enemyPokemon, setEnemyPokemon] = useState()
-    const handlePokemonAttack = (attack, selectedOption) => {
+    const handleSubMenuOption = (option, selectedOption) => {
         if (selectedOption === "attacks") {
             if (enemyPokemon && enemyPokemon.currentHP > 0) {
-                const result = enemyPokemon.currentHP - attack.damage;
+                const result = enemyPokemon.currentHP - option.damage;
                 if (result <= 0) {
                     setEnemyPokemon((prevState) => {
                         let newState = { ...prevState }
@@ -82,14 +82,14 @@ const Battleground = () => {
         if (selectedOption === "objects") {
             setUserPokemon((prevState) => {
                 let newPokemon = { ...prevState }
-                newPokemon.currentHP += attack.value
+                newPokemon.currentHP += option.value
                 return newPokemon
             })
             setUser((prevState) => {
                 let newUser = { ...prevState }
                 newUser.pokemons.forEach((pokemon) => {
                     if (pokemon.active) {
-                        pokemon.currentHP += attack.value
+                        pokemon.currentHP += option.value
                     }
                     return pokemon
                 })
@@ -129,7 +129,7 @@ const Battleground = () => {
         <div className={classes.battleground}>
             {userPokemon && <Pokemon pokemon={userPokemon} user="user"></Pokemon>}
             {enemyPokemon && <Pokemon pokemon={enemyPokemon} user="enemy"></Pokemon>}
-            <FightMenu user={user} enemyPokemon={enemyPokemon} clickHandler={handlePokemonAttack} ></FightMenu>
+            <FightMenu user={user} enemyPokemon={enemyPokemon} clickHandler={handleSubMenuOption} ></FightMenu>
         </div>
     )
 }
