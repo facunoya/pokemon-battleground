@@ -1,20 +1,25 @@
 .battleground {
+    background-image: url('../assets/img/battleground-background.png');
     background-repeat: no-repeat;
-    height: 100%;
-    width: 80%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 50%;
     margin: auto;
     display: flex;
+    overflow: hidden;
     position: relative;
 }
 
 .battlegroundImg {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    width: auto;
+    margin: auto;
 }
 
 @media (max-width: 425px) {
     .battleground {
-        height: 100vh;
+        height: 100%;
         width: 100vw;
     }
 }

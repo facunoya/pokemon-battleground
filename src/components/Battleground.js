@@ -56,8 +56,6 @@ const Battleground = () => {
     }, [])
     return (
         <div className={classes.battleground}>
-            <input type="button" value="atacar" onClick={() => handlePokemonAttack({ damage: 74 })} />
-            <img className={classes.battlegroundImg} src="./assets/img/battleground-background.png" />
             {userPokemon && <Pokemon pokemon={userPokemon} user="user"></Pokemon>}
             {enemyPokemon && <Pokemon pokemon={enemyPokemon} user="enemy"></Pokemon>}
             <FightMenu pokemon={userPokemon} enemyPokemon={enemyPokemon} clickHandler={handlePokemonAttack} user="user" ></FightMenu>
