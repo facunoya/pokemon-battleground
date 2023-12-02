@@ -4,6 +4,59 @@ import FightMenu from './UI/FightMenu'
 import { useEffect, useState } from 'react'
 
 const Battleground = () => {
+    const [user, setUser] = useState({
+        name: "Red",
+        objects: [
+            {
+                name: "potion",
+                value: 50
+            },
+            {
+                name: "maxPotion",
+                value: 150
+            }
+        ],
+        pokemons: [{
+            name: "Dragonite",
+            active: true,
+            maxHP: 500,
+            currentHP: 200,
+            currentXP: 200,
+            level: 15,
+            moves: [
+                { name: "Quick Attack", damage: 50 },
+                { name: "Punch", damage: 150 },
+                { name: "Thunderbolt", damage: 40 },
+                { name: "Hiper Ray", damage: 200 }
+            ]
+        }, {
+            name: "Mew",
+            maxHP: 500,
+            active: false,
+            currentHP: 200,
+            currentXP: 200,
+            level: 15,
+            moves: [
+                { name: "Quick Attack", damage: 50 },
+                { name: "Punch", damage: 150 },
+                { name: "Thunderbolt", damage: 40 },
+                { name: "Hiper Ray", damage: 200 }
+            ]
+        }, {
+            name: "Mew",
+            maxHP: 500,
+            active: false,
+            currentHP: 200,
+            currentXP: 200,
+            level: 15,
+            moves: [
+                { name: "Quick Attack", damage: 50 },
+                { name: "Punch", damage: 150 },
+                { name: "Thunderbolt", damage: 40 },
+                { name: "Hiper Ray", damage: 200 }
+            ]
+        }]
+    })
     const [userPokemon, setUserPokemon] = useState()
     const [enemyPokemon, setEnemyPokemon] = useState()
     const handlePokemonAttack = (attack) => {
@@ -22,7 +75,6 @@ const Battleground = () => {
                     return newState
                 })
             }
-            console.log(result)
             return result
         }
     }
@@ -58,7 +110,7 @@ const Battleground = () => {
         <div className={classes.battleground}>
             {userPokemon && <Pokemon pokemon={userPokemon} user="user"></Pokemon>}
             {enemyPokemon && <Pokemon pokemon={enemyPokemon} user="enemy"></Pokemon>}
-            <FightMenu pokemon={userPokemon} enemyPokemon={enemyPokemon} clickHandler={handlePokemonAttack} user="user" ></FightMenu>
+            <FightMenu user={user} enemyPokemon={enemyPokemon} clickHandler={handlePokemonAttack} ></FightMenu>
         </div>
     )
 }
