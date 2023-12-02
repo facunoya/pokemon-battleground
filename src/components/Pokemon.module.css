@@ -24,3 +24,9 @@
     top: 2rem;
     right: 2rem;
 }
+
+@media(max-height: 500px) {
+    .pokemonWrapper {
+        width: 100px;
+    }
+}
