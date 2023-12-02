@@ -6,7 +6,6 @@ const FightMenu = ({ pokemon, enemyPokemon }) => {
 
     return (
         <div className={classes.fightMenu}>
-
             <ul className={classes.optionsContainer}>
                 <li className={classes.options}><AttackList pokemon={pokemon} enemyPokemon={enemyPokemon} ></AttackList></li>
                 <li className={classes.options}>Objects</li>
