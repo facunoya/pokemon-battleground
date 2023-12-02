@@ -60,7 +60,7 @@ const Battleground = () => {
             <img className={classes.battlegroundImg} src="./assets/img/battleground-background.png" />
             {userPokemon && <Pokemon pokemon={userPokemon} user="user"></Pokemon>}
             {enemyPokemon && <Pokemon pokemon={enemyPokemon} user="enemy"></Pokemon>}
-            <FightMenu pokemon={userPokemon} enemyPokemon={enemyPokemon} user="user" ></FightMenu>
+            <FightMenu pokemon={userPokemon} enemyPokemon={enemyPokemon} clickHandler={handlePokemonAttack} user="user" ></FightMenu>
         </div>
     )
 }
