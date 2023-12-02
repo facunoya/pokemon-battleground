@@ -1,32 +1,27 @@
-.userPokemon {
-    height: 50%;
-    width: 50%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: 100px;
-    position: absolute;
+.pokemonImage {
+    width: 100%;
+    /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de aspecto original */
+    display: block;
+    /* Elimina espacio adicional por defecto en la parte inferior de la imagen */
+    max-width: 100%;
 }
 
-.enemyPokemon {
-    height: 50%;
-    width: 50%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    top: 100px;
-    position: absolute;
-}
+
 
 .userPokemonWrapper {
-    height: 40%;
-    width: 40%;
+    max-width: 600px;
+    /* Establece el ancho máximo deseado */
+    margin: 0 auto;
     bottom: 30px;
     left: 100px;
     position: absolute;
 }
 
 .enemyPokemonWrapper {
-    height: 200px;
-    width: 150px;
+    height: 40%;
+    width: 40%;
     top: 10px;
     right: 100px;
     position: absolute;

@@ -6,7 +6,7 @@ const Pokemon = ({ user, pokemon }) => {
         <div className={user === "user" ? classes.userPokemonWrapper : classes.enemyPokemonWrapper}>
             <LifeBar currentHP={pokemon.currentHP} maxHP={pokemon.maxHP}></LifeBar>
             <div className={user === "user" ? classes.userPokemon : classes.enemyPokemon}>
-                <img src="./assets/img/pokemon2.png" className={classes.pokemonImage} />
+                <img src={user === "user" ? './assets/img/pokemon2.png' : './assets/img/pokemon.png'} className={classes.pokemonImage} />
             </div>
         </div>
     )
